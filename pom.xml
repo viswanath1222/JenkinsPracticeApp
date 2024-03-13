@@ -54,26 +54,21 @@
 				</configuration>
 			</plugin>
 			<plugin>
-                <groupId>com.google.cloud.tools</groupId>
-                <artifactId>jib-maven-plugin</artifactId>
-                <version>3.4.1</version>
-                <configuration>
-					<from>
-						<image>openjdk:17-jdk-slim</image>
-					</from>
-                    <to>
-                        <image>registry.hub.docker.com/vishwanathk1222/jenkinse-xample</image>
-                        <tags>
-							<tag>${project.artifactId}</tag>
-							<tag>${project.version}</tag>
-						</tags>
-                        <auth>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>3.4.1</version>
+				<configuration>
+					<to>
+						<image>
+							registry.hub.docker.com/vishwanathk1222/jenkinse-xample</image>
+						<tags>${project.version}</tags>
+						<auth>
 							<username>vishwanathk1222</username>
 							<password>1222@Viswanath</password>
 						</auth>
-                    </to>
-                </configuration>
-            </plugin>
+					</to>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
